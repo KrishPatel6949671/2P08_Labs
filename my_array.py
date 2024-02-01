@@ -86,12 +86,22 @@ def swap(array, j, k):# Swap the values at 2 indices
         array[j], array[k] = array[k], array[j]
          
 #Exercise 10_1: implement a function that implement bubble sorting
-#def bubbleSort(array):               # Sort comparing adjacent vals
+def bubbleSort(array):               # Sort comparing adjacent vals
+    for i in range(0,len(array)-1):
+        for j in range(0,len(array)-1):
+            if array[i]>array[i+1]:
+                swap(array, array[i], array[i+1])
 
+    return None
             
 #Exercise 10_2: implement a function that implement selection sorting
-#def selectionSort(array):           # Sort by selecting min and 
-    ## ADD YOUR CODE HERE
+def selectionSort(array):           # Sort by selecting min and 
+    for i in range(0,len(array)-1):
+        min = array[i]
+        
+
+
+
 
 #Exercise 11: You are asked to improve the find_index function of Exercise 7. Assuming the array is sorted, implement binary search to returns the index of the (first) element with the specified value. Return -1 if the value was not found (do not use any python built-in function)
 #def findSortedArray(array, item):             # Find index at or just below key
