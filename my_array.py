@@ -101,6 +101,7 @@ def selectionSort(array):           # Sort by selecting min and
         for j in range(i+1,len(array)-1):
             if array[j] < array[minIndex]:
                 minIndex = j
+                
         swap(array,minIndex,i)
     return None
 
@@ -108,16 +109,17 @@ def selectionSort(array):           # Sort by selecting min and
 def findSortedArray(array, item):             # Find index at or just below key
     high = len(array)-1
     low = 0
+    result = -1
     while low<=high:
         mid = high + low // 2
         if array[mid] == item:
+            result = mid
             high = mid-1
-            return mid
         elif array[mid] < item:
             low = mid+1
         else:
             high = mid-1
-    return -1
+    return result
 
 
 
